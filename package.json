@@ -1,0 +1,36 @@
+{
+  "name": "signature-generator",
+  "version": "1.0.0",
+  "description": "RSA-SHA256 Signature Generator",
+  "main": "main.js",
+  "author": "Baroto",
+  "license": "MIT",
+  "scripts": {
+    "build": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^37.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "local.baroto.signaturegenerator",
+    "productName": "Signature Generator",
+    "files": [
+      "main.js",
+      "Generete Signature SHA.html"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "portable": {
+      "artifactName": "Signature-Generator.exe"
+    }
+  }
+}
